@@ -10,7 +10,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
 @Configuration
-@ComponentScan("com.gmail.yuramitryahin")
+@ComponentScan(basePackages = {"com.gmail.yuramitryahin.dao",
+        "com.gmail.yuramitryahin.service"})
 public class AppConfig {
     @Bean
     public DataSource getDataSource() {
