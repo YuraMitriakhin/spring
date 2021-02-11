@@ -4,5 +4,5 @@ import com.gmail.yuramitryahin.model.User;
 import com.gmail.yuramitryahin.model.dto.UserResponseDto;
 
 public interface UserMapper {
-    UserResponseDto userToResponseDto(User user);
+    UserResponseDto toDto(User user);
 }
