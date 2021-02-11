@@ -7,7 +7,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserMapperImpl implements UserMapper {
     public UserResponseDto toDto(User user) {
-        return new UserResponseDto(user.getFirstName(), user.getFirstName(),
-                user.getEmail());
+        UserResponseDto userResponseDto = new UserResponseDto();
+        userResponseDto.setId(user.getId());
+        userResponseDto.setFirstName(user.getFirstName());
+        userResponseDto.setLastName(user.getLastName());
+        userResponseDto.setEmail(user.getEmail());
+        return userResponseDto;
     }
 }
